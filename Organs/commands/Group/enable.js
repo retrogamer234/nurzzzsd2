@@ -9,7 +9,7 @@ module.exports = {
   start: async (
     client,
     m,
-    { text, args, prefix, isBotAdmin, isAdmin, mentionByTag }
+    { text, args, prefix, iscreator, mentionByTag }
   ) => {
     if (!isAdmin)
       return client.sendMessage(
