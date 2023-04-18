@@ -6,7 +6,7 @@ module.exports={
     category:"Mods",
     react:"✅",
     start:async(client,m,{text,ban,pushName,mentionByTag,iscreator,args,body,quoted,mime})=>{
-        if(!iscreator) return client.sendMessage(m.from,{text:'*Only mods can use this command*'},{quoted:m})
+        if(!iscreator) return client.sendMessage(m.from,{text:'*Only owner can use this command*'},{quoted:m})
   
         const mention= await mentionByTag
 
@@ -14,7 +14,7 @@ module.exports={
         if (!userss) return m.reply("❌ Couldn't find any userID in context")
  if(ban.includes(`${userss}`)) return client.sendMessage(m.from,{text:`@${userss.split("@")[0]} is already banned`,mentions:[userss]},{quoted:m})
  await db.push("ban",`${userss}`)
- client.sendMessage(m.from,{text:`Successfully Banned @${userss.split("@")[0]} from using Commands`,mentions:[userss]},{quoted:m})
+ client.sendMessage(m.from,{text:`The Ban Hammer Has Spoken. @${userss.split("@")[0]} from using Commands`,mentions:[userss]},{quoted:m})
 
     }
 }
