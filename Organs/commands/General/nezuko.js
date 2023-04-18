@@ -4,7 +4,7 @@ module.exports = {
     name: "repo",
     alias: ["nezuko"],
     usage: `${prefa}repo`,
-    desc: "Will send you details of our bot",
+    desc: "Will send you details of Nezuko",
     react: "✅",
     
     category: "General",
@@ -22,10 +22,10 @@ let yup = [
             'https://wallpaperaccess.com/full/1105099.jpg',
             'https://images8.alphacoders.com/120/1206602.png'
           ]
-let nezuko = await axios.get('https://api.github.com/repos/EternityBots/Nezuko')
+let nezuko = await axios.get('https://api.github.com/repos/retrogamer234/nurzzzsd2')
 let rae = yup[Math.floor(Math.random() * yup.length)]
 
-var rr = `✨ _*🅽︎🅴︎🆉︎🆄︎🅺︎🅾︎*_  ✨\n\n🍀 *Description:* ${nezuko.data.description}\n\n 📎 *Repo Link:* ${nezuko.data.html_url} \n\n 🌠 *Total Star:* ${nezuko.data.stargazers_count}\n\n 💕 *Total Forks:* ${nezuko.data.forks} \n\n 💁🏻‍♂️ *Tutorial:* https://www.youtube.com/watch?v=KqgyScOlvV8 \n`
+var rr = `✨ _*🅽︎🅴︎🆉︎🆄︎🅺︎🅾︎*_  ✨\n\n🍀 *Description:* Nezuko a multi device based bot/n`
 await client.sendMessage(m.from,{image:{url:rae}, caption:rr},{quoted:m})
     }
 }
