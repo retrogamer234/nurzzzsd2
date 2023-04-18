@@ -9,9 +9,9 @@ module.exports = {
   start: async (
     client,
     m,
-    { text, args, prefix, iscreator, mentionByTag }
+    { text, args, prefix, isBotAdmin, isAdmin, mentionByTag }
   ) => {
-    if (iscreator)
+    if (!isAdmin)
       return client.sendMessage(
         m.from,
         { text: "This is admin only command" },
