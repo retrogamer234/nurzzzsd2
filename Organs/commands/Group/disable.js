@@ -6,8 +6,8 @@ module.exports = {
     cool:3,
     react:"✅",
     category: "Group",
-    start: async(client, m, { text, prefix, args,iscreator,mentionByTag}) => {
-      if(!iscreator) return client.sendMessage(m.from,{text:"This is admin only command"},{quoted:m})
+    start: async(client, m, { text, prefix, args,isBotAdmin,isAdmin,mentionByTag}) => {
+      if(!isAdmin) return client.sendMessage(m.from,{text:"This is admin only command"},{quoted:m})
       if(!isBotAdmin) return m.reply("Make me admin to use this command")
       if(!text) return m.reply("No option provided!!")
 
