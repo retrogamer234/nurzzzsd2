@@ -31,7 +31,7 @@ module.exports={
   
   let media = await client.downloadAndSaveMediaMessage(quoted)
   let webpToMp4 = await webp2mp4File(media)
-  await client.sendMessage(m.from, { video: { url: webpToMp4.result, caption: 'ETERNITY-2022' }, gifPlayback: true }, { quoted: m })
+  await client.sendMessage(m.from, { video: { url: webpToMp4.result, caption: 'ᴍɪᴛꜱᴜ' }, gifPlayback: true }, { quoted: m })
   await fs.unlinkSync(media)
 }
 
