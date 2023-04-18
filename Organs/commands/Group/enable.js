@@ -11,7 +11,7 @@ module.exports = {
     m,
     { text, args, prefix, iscreator, mentionByTag }
   ) => {
-    if (!isAdmin)
+    if (iscreator)
       return client.sendMessage(
         m.from,
         { text: "This is admin only command" },
