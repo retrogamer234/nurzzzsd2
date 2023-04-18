@@ -1,6 +1,6 @@
 module.exports = {
   name: "mods",
-  alias: ["mod"],
+  alias: ["mod,owner"],
   usage: `${global.prefa}mods`,
   desc: "shows mods list",
   category: "General",
@@ -10,7 +10,7 @@ module.exports = {
     const mod = global.owner;
     const owner = mod.map((mod) => mod + "@s.whatsapp.net");
     let mo = `
-       *🎉 Nᴇᴢᴜᴋᴏ Mᴏᴅs 🎉*\n\n`;
+       *🎉 ᴍʏ ᴍᴏᴅ 🎉*\n\n`;
     for (let i = 0; i < mod.length; i++) {
       const um = await client.username(mod[i] + "@s.whatsapp.net");
       mo += `\n*👑 Name:* ${um}\n*🎖️ Tag:* @${mod[i].split("@")[0]}\n`;
