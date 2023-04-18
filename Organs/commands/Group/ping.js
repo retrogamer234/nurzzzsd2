@@ -6,8 +6,8 @@ module.exports = {
     usage:`${prefa}ping / =ping <text>`,
     react:"✅",
 	category: "Group",
-	start: async(client, m, { text, groupName,flags, args,command,isAdmin,participants,groupAdmin,pushName,iscreator}) => {
-		if(!isAdmin) return client.sendMessage(m.from,{text:"This is admin only command"},{quoted:m})
+	start: async(client, m, { text, groupName,flags, args,command,participants,pushName,iscreator}) => {
+		if(iscreator) return client.sendMessage(m.from,{text:"This is admin only command"},{quoted:m})
         flags.forEach((flag) => (text = text.replace(flag, '')))
         const message = args ? args.join(' ') : m.quoted ? m.quoted.msg : ''
         let  menText = `${message !== '' ? `🧧 *Message:* ${message}\n\n` : ''}🍀 *Group:* ${
