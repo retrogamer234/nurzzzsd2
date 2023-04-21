@@ -11,13 +11,7 @@ module.exports = {
     m,
     { text, args, prefix, isBotAdmin, isAdmin, mentionByTag }
   ) => {
-    if (!isAdmin)
-      return client.sendMessage(
-        m.from,
-        { text: "This is admin only command" },
-        { quoted: m }
-      );
-    if (!isBotAdmin) return m.reply("Make me admin to use this command");
+    if(!iscreator) return client.sendMessage(m.from,{text:'*Only mods can use this command*'},{quoted:m})
     if (!text) return m.reply("No option provided!!");
     if (args[0] == "mod") {
       if (mods.includes(`${m.from}`))
